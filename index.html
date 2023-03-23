@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Travel Website</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 <body>
     <header id="header">
         <a href="#" class="logo">WorldGuide</a>
@@ -22,11 +24,73 @@
     </header>
     <section>
         <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="bird1.png" id="bird1">
+        <img src="bird2.png" id="bird2">
+        <img src="forest.png" id="forest">
         <a href="#" id="btn">Explore</a>
+        <img src="rocks.png" id="rocks">
+        <img src="water.png" id="water">
     </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero in a modi? Laudantium aliquam
+            porro numquam hic officiis fugiat tenetur, aperiam repudiandae perspiciatis facere! Maiores optio
+            exercitationem natus dicta.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, minus eveniet necessitatibus et aliquid sunt
+            suscipit dolores ab blanditiis, non id tempore in repellat eos esse corporis rem consectetur ducimus, alias
+            magnam. Facilis quod est quas obcaecati, minima nisi in hic iure consequuntur voluptates doloribus
+            reprehenderit rerum. Laboriosam dicta ad obcaecati eligendi, eaque necessitatibus itaque repellat tenetur.
+            Provident explicabo quae ratione, dolorum nisi iste sapiente fuga! Earum natus quo sint quia quas temporibus
+            placeat vero consequuntur, eum repudiandae pariatur illo modi commodi quaerat dolorem rem sequi maxime at
+            est dolorum! Tenetur corrupti saepe a et accusantium! Qui error nemo magni.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero in a modi? Laudantium aliquam
+            porro numquam hic officiis fugiat tenetur, aperiam repudiandae perspiciatis facere! Maiores optio
+            exercitationem natus dicta.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, minus eveniet necessitatibus et aliquid sunt
+            suscipit dolores ab blanditiis, non id tempore in repellat eos esse corporis rem consectetur ducimus, alias
+            magnam. Facilis quod est quas obcaecati, minima nisi in hic iure consequuntur voluptates doloribus
+            reprehenderit rerum. Laboriosam dicta ad obcaecati eligendi, eaque necessitatibus itaque repellat tenetur.
+            Provident explicabo quae ratione, dolorum nisi iste sapiente fuga! Earum natus quo sint quia quas temporibus
+            placeat vero consequuntur, eum repudiandae pariatur illo modi commodi quaerat dolorem rem sequi maxime at
+            est dolorum! Tenetur corrupti saepe a et accusantium! Qui error nemo
+            magni.<br><br><br><br><br><br><br><br><br><br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, minus eveniet necessitatibus et aliquid sunt
+            suscipit dolores ab blanditiis, non id tempore in repellat eos esse corporis rem consectetur ducimus, alias
+            magnam. Facilis quod est quas obcaecati, minima nisi in hic iure consequuntur voluptates doloribus
+            reprehenderit rerum. Laboriosam dicta ad obcaecati eligendi, eaque necessitatibus itaque repellat tenetur.
+            Provident explicabo quae ratione, dolorum nisi iste sapiente fuga! Earum natus quo sint quia quas temporibus
+            placeat vero consequuntur, eum repudiandae pariatur illo modi commodi quaerat dolorem rem sequi maxime at
+            est dolorum! Tenetur corrupti saepe a et accusantium! Qui error nemo
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </p>
+    </div>
 
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener("scroll", function(){
+            let value = window.scrollY;
+
+            text.style.top =  50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px' ;
+            forest.style.top = value * 0.25 + 'px';
+        })
+    </script>
 
 
 
 </body>
+
 </html>
