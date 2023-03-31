@@ -69,7 +69,7 @@
 
                 </div>
                 <div class="book-btn">
-                    <input type="submit" value="Ready to go" class="btn" name="send">
+                    <input type="submit" value="Ready to go" class="btn" name="send" onclick="openPopup()">
                 </div>
 
             </form>
@@ -77,6 +77,28 @@
 
             <section>
     </div>
+    <div class="popup" id="popup">
+        <img src="images/tick.png"  width="150px" alt="">
+        <h2>Thank You!</h2>
+        <p>Your booking is confirmed</p>
+        <button type="ok" onclick="closePopup()">OK</button>
+    </div>
+
+<script>
+    let popup = document.getElementById('popup');
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+
+
+
+</script>
+
+
 </body>
 
 </html>
