@@ -12,13 +12,17 @@
         $leaving = $_POST['leaving'];
 
         $request="INSERT INTO book_form(name,email,phone,address,location,guests,arrivals,leaving) VALUES
-         ('$name','$email'.'$phone','$address','$location','$guests','$arrivals','$leaving')";
+         ('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving')";
 
-        mysqli_query($connection,$request) ;
+        $result=mysqli_query($connection,$request) ;
+
+        mysqli_close($connection);
 
         header('location:booking.html');
     }else{
         echo 'something went wrong try again'; 
     }
+
+   
 
 ?>
