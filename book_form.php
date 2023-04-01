@@ -16,9 +16,11 @@
 
         $result=mysqli_query($connection,$request) ;
 
+        
+
         mysqli_close($connection);
 
-        header('location:booking.html');
+        header('location:popup.html');
     }else{
         echo 'something went wrong try again'; 
     }
@@ -26,3 +28,6 @@
    
 
 ?>
+ 
+
+ 
